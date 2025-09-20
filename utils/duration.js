@@ -1,18 +1,4 @@
-// function estimatedRideDurationHours(fromPincode, toPincode) {
-//   const a = parseInt(fromPincode, 10);
-//   const b = parseInt(toPincode, 10);
-//   if (Number.isNaN(a) || Number.isNaN(b)) {
-//     throw new Error('Invalid pincode(s)');
-//   }
-//   return Math.abs(b - a) % 24;
-// }
 
-// module.exports = { estimatedRideDurationHours };
-
-
-// backend/utils/duration.js
-// Simple heuristic to estimate ride duration (hours) based on numeric difference of pincodes.
-// This is not real geographic distance, but gives more realistic variability than a constant.
 
 function estimatedRideDurationHours(fromPincode, toPincode) {
   // normalize to numbers - if pincode strings, take numeric parts
